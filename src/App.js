@@ -5,7 +5,7 @@ import MenuTop from "./components/MenuTop";
 import Home from "./pages/home";
 import NewMovies from "./pages/new-movies";
 import Popular from "./pages/popular";
-import Search from "./pages/search";
+import Search from "./pages/search/search";
 import Movie from "./pages/movie";
 import Error404 from "./pages/error404";
 
@@ -15,7 +15,7 @@ export default function App() {
   return (
     <Layout>
       <Router>
-        <Header style={{zIndex: 1}}>
+        <Header style={{ zIndex: 1 }}>
           <MenuTop />
         </Header>
         <Content>
