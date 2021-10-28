@@ -15,6 +15,10 @@ export default function Home() {
     `${URL_API}/movie/popular?api_key=${API}&language=es-ES&page=1`
   );
 
+  const topRatedMovies = useFetch(
+    `${URL_API}/movie/top_rated?api_key=${API}&language=es-ES&page=1`
+  );
+
   return ( 
     <>  
       <SliderMovies movies={newMovies} />
@@ -23,7 +27,7 @@ export default function Home() {
           <MovieList title="Películas populares" movies={popularMovies}/>
         </Col>
         <Col span={12}>
-          "..."
+          <MovieList title="Top Mejores Películas puntuadas" movies={topRatedMovies} />
         </Col>
       </Row>
       
